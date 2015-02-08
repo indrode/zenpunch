@@ -2,9 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.6'
 gem 'rails-api'
+gem 'puma'
 
 group :development do
   gem 'spring'
+  gem 'mina'
 end
 
 group :development, :test do
