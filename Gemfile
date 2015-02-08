@@ -7,6 +7,7 @@ gem 'puma'
 group :development do
   gem 'spring'
   gem 'mina'
+  gem 'mina-puma', :require => false
 end
 
 group :development, :test do
