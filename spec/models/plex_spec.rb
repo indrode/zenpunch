@@ -11,7 +11,7 @@ RSpec.describe Plex, type: :model do
   describe '.update_ip!' do
     it 'stores an IP address' do
       allow(File).to receive(:write).with("#{Rails.root}/../../shared/ip.txt", 'new.ip.address')
-      expect(Plex.update_ip!('new.ip.address')).to be_truthy
+      expect(Plex.update_ip!('new.ip.address')).to be_nil
     end
   end
 end
