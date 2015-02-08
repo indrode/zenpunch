@@ -12,7 +12,7 @@ class Plex
     private
 
     def filename
-      "#{Rails.root}/ip.txt"
+      "#{Rails.root}/../../shared/ip.txt"
     end
   end
 end
