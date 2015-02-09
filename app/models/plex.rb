@@ -6,6 +6,7 @@ class Plex
 
     def update_ip!(ip)
       File.write(filename, ip)
+      ip
     end
 
     private

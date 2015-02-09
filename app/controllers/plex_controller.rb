@@ -8,7 +8,7 @@ class PlexController < ApplicationController
   end
 
   def update
-    render json: { success: Plex.update_ip!(params[:ip]) }
+    render json: { ip: Plex.update_ip!(params[:ip]) }
   end
 
   private
