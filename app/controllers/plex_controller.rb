@@ -1,6 +1,6 @@
 class PlexController < ApplicationController
   def main
-    render json: { status: true }
+    render :file => "public/_index.html"
   end
 
   def index
