@@ -1,4 +1,4 @@
-root = "/home/akira/zenpunch"
+root = "/home/akira/zenpunch-api"
 environment 'production'
 daemonize true
 bind "unix://#{root}/tmp/socket"
