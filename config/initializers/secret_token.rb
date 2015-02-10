@@ -16,4 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-ZenpunchApi::Application.config.secret_token = '03f05f757308532f2a8c239fa79a9c83b462f13a45abd805a8a56c13e42ea00042fceb325d3a75237a4206ab3eaff6515d2892af5860ce95849f4eadbc187566'
+ZenpunchApi::Application.config.secret_token = ''
