@@ -1,4 +1,4 @@
-class Plex
+class Server
   class << self
     def ip
       File.read(filename)
