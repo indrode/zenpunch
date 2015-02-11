@@ -12,6 +12,7 @@ RSpec.describe PlexController, type: :controller do
 
   describe 'PATCH #update' do
     it 'updates the IP address' do
+      allow(Server).to receive(:filename).and_return 'ip.txt'
       patch :update, ip: 'new.ip.address', id: 1
       expect(response).to be_success
       expect(JSON.parse(response.body)['ip']).to eq('new.ip.address')
