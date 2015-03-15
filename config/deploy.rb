@@ -11,7 +11,7 @@ require 'mina/puma'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :domain, 'tetsuo'
-set :deploy_to, '/home/akira/zenpunch-api'
+set :deploy_to, '/home/akira/zenpunch'
 set :repository, 'git://github.com/indrode/zenpunch-api.git'
 set :branch, 'master'
 set :chruby_path, "/usr/local/share/chruby/chruby.sh"
