@@ -1,3 +1,11 @@
+GIT
+  remote: spacecake-git:/home/git/kotae.git
+  revision: 3b81daf829233db75ad14fe19ec4d0bc59ccb5fa
+  ref: zenpunch
+  specs:
+    kotae (0.1.0)
+      dotenv (~> 0.8.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -33,6 +41,7 @@ GEM
       parser (>= 2.2.0.pre.3, < 3.0)
     builder (3.2.2)
     diff-lcs (1.2.5)
+    dotenv (0.8.0)
     erubis (2.7.0)
     hike (1.2.3)
     i18n (0.7.0)
@@ -121,6 +130,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  kotae (= 0.1.0)!
   mina
   mina-puma
   puma (= 2.5.1)

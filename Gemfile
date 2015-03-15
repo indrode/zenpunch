@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.6'
 gem 'rails-api'
 gem 'puma', '2.5.1'
+gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
 
 group :development do
   gem 'spring'
