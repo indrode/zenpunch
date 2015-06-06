@@ -9,7 +9,6 @@ group :development do
   gem 'spring'
   gem 'mina'
   gem 'rubocop', require: false
-  gem 'mina-puma'
 end
 
 group :development, :test do
