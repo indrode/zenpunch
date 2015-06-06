@@ -1,10 +1,12 @@
-root = "/home/akira/zenpunch"
 environment 'production'
 daemonize true
-bind "unix://#{root}/tmp/socket"
-pidfile "#{root}/tmp/pid"
-state_path "#{root}/tmp/state"
-rackup "#{root}/current/config.ru"
+
+pidfile '/home/akira/zenpunch/shared/tmp/pids/puma.pid'
+state_path '/home/akira/zenpunch/shared/tmp/pids/puma.state'
 
 threads 2, 4
-preload_app!
+bind 'unix:///home/akira/zenpunch/shared/tmp/sockets/puma.sock'
+
+on_worker_boot do
+  ActiveRecord::Base.establish_connection
+end
