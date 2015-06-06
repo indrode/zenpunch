@@ -8,7 +8,7 @@ gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
 group :development do
   gem 'spring'
   gem 'mina'
-  gem 'rubocop'
+  gem 'rubocop', require: false
   gem 'mina-puma'
 end
 
