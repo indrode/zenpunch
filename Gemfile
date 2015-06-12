@@ -4,6 +4,7 @@ gem 'rails', '4.2.1'
 gem 'rails-api'
 gem 'puma', '2.5.1'
 gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
+gem 'fitgem'
 
 group :development do
   gem 'spring'
