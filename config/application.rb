@@ -4,7 +4,7 @@ require File.expand_path('../boot', __FILE__)
 require "active_model/railtie"
 # require "active_record/railtie"
 require "action_controller/railtie"
-# require "action_mailer/railtie"
+require "action_mailer/railtie"
 require "action_view/railtie"
 # require "sprockets/railtie"
 # require "rails/test_unit/railtie"
@@ -26,5 +26,15 @@ module ZenpunchApi
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               ENV['MAILER_DOMAIN'],
+      user_name:            ENV['MAILER_USERNAME'],
+      password:             ENV['MAILER_PW'],
+      authentication:       'plain',
+      enable_starttls_auto: true
+    }
   end
 end
