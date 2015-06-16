@@ -5,6 +5,7 @@ gem 'rails-api'
 gem 'puma', '2.5.1'
 gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
 gem 'fitgem'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'spring'
