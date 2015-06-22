@@ -1,6 +1,6 @@
 GIT
   remote: spacecake-git:/home/git/kotae.git
-  revision: b24d845362a702e0e89f7f12de9a5f4d06bbc352
+  revision: e10ca6399bafe537e67b70d7239175ac6ee907c3
   ref: zenpunch
   specs:
     kotae (0.1.0)
