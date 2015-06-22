@@ -14,6 +14,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'capybara'
   gem 'rspec-rails', '~> 3.0'
   gem 'email_spec'
   gem "codeclimate-test-reporter", require: false
