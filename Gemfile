@@ -17,7 +17,8 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails', '~> 3.0'
   gem 'email_spec'
-  gem "codeclimate-test-reporter", require: false
+  gem 'codeclimate-test-reporter', require: false
+  gem 'webmock', require: false
 end
 
 # To use ActiveModel has_secure_password
