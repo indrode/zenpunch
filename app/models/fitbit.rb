@@ -9,15 +9,15 @@ class Fitbit
   end
 
   def user_info
-    client.user_info['user']
+    @user_info ||= client.user_info['user']
   end
 
   def activities_on_date
-    client.activities_on_date(date)
+    @activities_on_date ||= client.activities_on_date(date)
   end
 
   def sleep_on_date
-    client.sleep_on_date(date)
+    @sleep_on_date ||= client.sleep_on_date(date)
   end
 
   def steps
