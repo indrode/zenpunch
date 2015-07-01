@@ -58,7 +58,6 @@ RSpec.describe Fitbit, type: :model do
   before do
     allow(f.client).to receive(:user_info).and_return('user' => 'user_info')
     allow(f.client).to receive(:sleep_on_date).and_return('sleep' => ['isMainSleep' => true])
-    allow(f).to receive(:activities_on_date).and_return(activities)
   end
 
   describe '#initialize' do
@@ -82,7 +81,8 @@ RSpec.describe Fitbit, type: :model do
 
   describe '#activities_on_date' do
     it 'returns the activities hash' do
-      expect(f.activities_on_date).to eq(activities)
+      allow(f.client).to receive(:activities_on_date).and_return('activities')
+      expect(f.activities_on_date).to eq('activities')
     end
   end
 
@@ -92,33 +92,39 @@ RSpec.describe Fitbit, type: :model do
     end
   end
 
-  describe '#steps' do
-    it 'returns the correct number of steps' do
-      expect(f.steps).to eq(14581)
+  describe 'activities' do
+    before do
+      allow(f).to receive(:activities_on_date).and_return(activities)
     end
-  end
 
-  describe '#distance' do
-    it 'returns the correct distance' do
-      expect(f.distance).to eq(6.94)
+    describe '#steps' do
+      it 'returns the correct number of steps' do
+        expect(f.steps).to eq(14581)
+      end
     end
-  end
 
-  describe '#calories' do
-    it 'returns the correct number of calories' do
-      expect(f.calories).to eq(2955)
+    describe '#distance' do
+      it 'returns the correct distance' do
+        expect(f.distance).to eq(6.94)
+      end
     end
-  end
 
-  describe '#sedentary_minutes' do
-    it 'returns the correct number of sedentary minutes' do
-      expect(f.sedentary_minutes).to eq(848)
+    describe '#calories' do
+      it 'returns the correct number of calories' do
+        expect(f.calories).to eq(2955)
+      end
     end
-  end
 
-  describe '#active_minutes' do
-    it 'returns the correct number of active minutes' do
-      expect(f.active_minutes).to eq(33)
+    describe '#sedentary_minutes' do
+      it 'returns the correct number of sedentary minutes' do
+        expect(f.sedentary_minutes).to eq(848)
+      end
+    end
+
+    describe '#active_minutes' do
+      it 'returns the correct number of active minutes' do
+        expect(f.active_minutes).to eq(33)
+      end
     end
   end
 end

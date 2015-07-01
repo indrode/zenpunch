@@ -10,6 +10,6 @@ class PlexController < ApplicationController
   private
 
   def plex_url
-    "http://#{Server.ip}:32400/web"
+    Rails.env == 'production' ? "http://#{Server.ip}:32400/web" : 'test.url'
   end
 end

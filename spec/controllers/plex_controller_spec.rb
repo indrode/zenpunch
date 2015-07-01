@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe PlexController, type: :controller do
   describe 'GET #index' do
     it 'redirects to the current Plex url' do
-      allow_any_instance_of(PlexController).to receive(:plex_url).and_return 'test.url'
       get :index
       expect(response).to be_redirect
       expect(response).to have_http_status(307)
