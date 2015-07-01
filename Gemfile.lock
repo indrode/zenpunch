@@ -1,6 +1,6 @@
 GIT
   remote: spacecake-git:/home/git/kotae.git
-  revision: 98b8754c44c757818baf848943f3293db1edeeba
+  revision: c869881b96108d2e6f3c3ddd3f473b3ecc25d1a8
   ref: zenpunch
   specs:
     kotae (0.1.0)
@@ -90,6 +90,7 @@ GEM
     open4 (1.3.4)
     parser (2.2.2.5)
       ast (>= 1.1, < 3.0)
+    pg (0.18.2)
     powerpack (0.1.1)
     puma (2.5.1)
       rack (>= 1.1, < 2.0)
@@ -179,6 +180,7 @@ DEPENDENCIES
   kotae (= 0.1.0)!
   mina
   newrelic_rpm
+  pg
   puma (= 2.5.1)
   rails (= 4.2.1)
   rails-api
