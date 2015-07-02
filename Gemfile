@@ -7,6 +7,7 @@ gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
 gem 'fitgem'
 gem 'newrelic_rpm'
 gem 'pg'
+gem 'feature_setting'
 
 group :development do
   gem 'spring'
