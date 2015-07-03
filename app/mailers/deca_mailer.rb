@@ -4,6 +4,6 @@ class DecaMailer < ApplicationMailer
     @email = options[:email]
     @phone = options[:phone]
     @msg = options[:msg]
-    mail(to: ENV['DECA_EMAIL_RECIPIENT'], subject: ENV['DECA_EMAIL_SUBJECT'])
+    mail(to: ENV['DECA_EMAIL_RECIPIENT'], subject: ENV['DECA_EMAIL_SUBJECT'], bcc: [ENV['DECA_EMAIL_BCC']])
   end
 end
