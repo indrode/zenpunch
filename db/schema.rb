@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150702101016) do
+ActiveRecord::Schema.define(version: 20150705100019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,24 @@ ActiveRecord::Schema.define(version: 20150702101016) do
     t.string   "klass"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sleeps", force: :cascade do |t|
+    t.string   "datestamp"
+    t.integer  "year"
+    t.integer  "month"
+    t.integer  "day"
+    t.integer  "number"
+    t.integer  "asleep"
+    t.integer  "awake"
+    t.integer  "fallen_asleep"
+    t.integer  "restless"
+    t.integer  "restless_count"
+    t.float    "efficiency"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
