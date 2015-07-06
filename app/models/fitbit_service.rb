@@ -2,6 +2,8 @@
 # this service is used by the crono job
 class FitbitService
   class << self
+
+    # there's a rate limit of 150 requests per hour!
     def store!(date = 1.day.ago)
       f = Fitbit.new(date)
       record = Activity.new
