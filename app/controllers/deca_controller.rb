@@ -1,9 +1,10 @@
 class DecaController < ApplicationController
   def create
-    if contact_params[:alternative].empty?
+    # TODO: refactor
+    if contact_params[:alternative].nil? && contact_params[:phone].strip != '123456'
       DecaMailer.contact_email(contact_params).deliver_now
-      redirect_to ENV['DECA_REDIRECT'] || root_path
     end
+    redirect_to ENV['DECA_REDIRECT'] || root_path
   end
 
   private
