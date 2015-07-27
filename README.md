@@ -1,6 +1,6 @@
 # zenpunch-api
 
-[![Code Climate](https://codeclimate.com/github/indrode/zenpunch-api/badges/gpa.svg)](https://codeclimate.com/github/indrode/zenpunch-api) [![Test Coverage](https://codeclimate.com/github/indrode/zenpunch-api/badges/coverage.svg)](https://codeclimate.com/github/indrode/zenpunch-api/coverage)
+[![Code Climate](https://codeclimate.com/github/indrode/zenpunch-api/badges/gpa.svg)](https://codeclimate.com/github/indrode/zenpunch-api) [![Test Coverage](https://codeclimate.com/github/indrode/zenpunch-api/badges/coverage.svg)](https://codeclimate.com/github/indrode/zenpunch-api/coverage) [![security](https://hakiri.io/github/indrode/zenpunch-api/master.svg)](https://hakiri.io/github/indrode/zenpunch-api/master)
 
 ## Deployment
 
