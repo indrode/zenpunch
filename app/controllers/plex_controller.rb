@@ -3,6 +3,10 @@ class PlexController < ApplicationController
     redirect_to plex_url, status: 307 # Temporary Redirect
   end
 
+  def ip
+    render json: { ip: Server.ip }
+  end
+
   def update
     render json: { ip: Server.update_ip!(params[:ip]) }
   end
