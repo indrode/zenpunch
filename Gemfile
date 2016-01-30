@@ -1,11 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'rails'
-gem 'rails-api'
+gem 'rails', '5.0.0.beta1.1'
 gem 'puma', '2.5.1'
 gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
 gem 'fitgem'
-gem 'newrelic_rpm'
+# gem 'newrelic_rpm'
 gem 'pg'
 gem 'feature_setting'
 
