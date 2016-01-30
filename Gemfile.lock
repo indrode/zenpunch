@@ -1,4 +1,51 @@
 GIT
+  remote: https://github.com/rspec/rspec-core.git
+  revision: e9b99468cbfa45d2c0f38e69a0c9c9184814e327
+  branch: master
+  specs:
+    rspec-core (3.5.0.pre)
+      rspec-support (= 3.5.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-expectations.git
+  revision: 4c1856b5155f14b4fa5f2c623f2e3fe92bbd1463
+  branch: master
+  specs:
+    rspec-expectations (3.5.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.5.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-mocks.git
+  revision: 2fcdbaee682efc35c146c9f713c079356ca3ec6e
+  branch: master
+  specs:
+    rspec-mocks (3.5.0.pre)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (= 3.5.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-rails.git
+  revision: 44e5b8a927c35397bdbf36a6a99fbb9a567f25b8
+  branch: master
+  specs:
+    rspec-rails (3.5.0.pre)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (= 3.5.0.pre)
+      rspec-expectations (= 3.5.0.pre)
+      rspec-mocks (= 3.5.0.pre)
+      rspec-support (= 3.5.0.pre)
+
+GIT
+  remote: https://github.com/rspec/rspec-support.git
+  revision: 4b938ec512d2fbee945913afbb957b510244ecb3
+  branch: master
+  specs:
+    rspec-support (3.5.0.pre)
+
+GIT
   remote: spacecake-git:/home/git/kotae.git
   revision: 2c5162297677c5d24266a87dc04dad3124a73ad1
   ref: zenpunch
@@ -57,6 +104,7 @@ GEM
     arel (7.0.0)
     ast (2.2.0)
     builder (3.2.2)
+    byebug (8.2.1)
     capybara (2.6.2)
       addressable
       mime-types (>= 1.16)
@@ -91,6 +139,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
+    debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     docile (1.1.5)
     dotenv (0.8.0)
@@ -140,8 +189,7 @@ GEM
       ast (~> 2.2)
     pg (0.18.4)
     powerpack (0.1.1)
-    puma (2.5.1)
-      rack (>= 1.1, < 2.0)
+    puma (2.16.0)
     rack (2.0.0.alpha)
       json
     rack-test (0.6.3)
@@ -175,22 +223,6 @@ GEM
     rainbow (2.1.0)
     rake (10.5.0)
     redis (3.2.2)
-    rspec-core (3.1.7)
-      rspec-support (~> 3.1.0)
-    rspec-expectations (3.1.2)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.1.0)
-    rspec-mocks (3.1.3)
-      rspec-support (~> 3.1.0)
-    rspec-rails (3.1.0)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.1.0)
-      rspec-expectations (~> 3.1.0)
-      rspec-mocks (~> 3.1.0)
-      rspec-support (~> 3.1.0)
-    rspec-support (3.1.2)
     rubocop (0.36.0)
       parser (>= 2.3.0.0, < 3.0)
       powerpack (~> 0.1)
@@ -216,6 +248,10 @@ GEM
       hitimes
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    web-console (3.1.1)
+      activemodel (>= 4.2)
+      debug_inspector
+      railties (>= 4.2)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -226,6 +262,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   capybara
   codeclimate-test-reporter
   email_spec
@@ -234,11 +271,16 @@ DEPENDENCIES
   kotae (= 0.1.0)!
   mina
   pg
-  puma (= 2.5.1)
-  rails (= 5.0.0.beta1.1)
-  rspec-rails (~> 3.0)
+  puma
+  rails (>= 5.0.0.beta1.1, < 5.1)
+  rspec-core!
+  rspec-expectations!
+  rspec-mocks!
+  rspec-rails!
+  rspec-support!
   rubocop
   spring
+  web-console (~> 3.0)
 
 BUNDLED WITH
    1.11.2

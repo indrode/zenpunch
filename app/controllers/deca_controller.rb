@@ -1,5 +1,5 @@
 class DecaController < ApplicationController
-  before_filter :validate_params!, only: [:create]
+  before_action :validate_params!, only: [:create]
 
   def create
     DecaMailer.contact_email(contact_params).deliver_now
@@ -9,7 +9,7 @@ class DecaController < ApplicationController
   private
 
   def validate_params!
-    render text: 'Invalid data!' unless (contact_params[:alternative].nil? && contact_params[:phone].strip != '123456')
+    render plain: 'Invalid data!' unless (contact_params[:alternative].nil? && contact_params[:phone].strip != '123456')
   end
 
   def contact_params

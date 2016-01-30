@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
   def index
-    render file: 'public/_index.html'
+    render json: '[zen punch] API'.to_json
   end
 end

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.0.beta1.1'
-gem 'puma', '2.5.1'
+gem 'rails', '>= 5.0.0.beta1.1', '< 5.1'
+gem 'puma'
 gem 'kotae', '0.1.0', git: 'spacecake-git:/home/git/kotae.git', ref: 'zenpunch'
 gem 'fitgem'
 # gem 'newrelic_rpm'
@@ -9,14 +9,20 @@ gem 'pg'
 gem 'feature_setting'
 
 group :development do
+  gem 'web-console', '~> 3.0'
   gem 'spring'
   gem 'mina'
   gem 'rubocop', require: false
 end
 
 group :development, :test do
+  gem 'byebug'
   gem 'capybara'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', git: 'https://github.com/rspec/rspec-rails.git', branch: 'master'
+  gem 'rspec-core', git: 'https://github.com/rspec/rspec-core.git', branch: 'master'
+  gem 'rspec-support', git: 'https://github.com/rspec/rspec-support.git', branch: 'master'
+  gem 'rspec-expectations', git: 'https://github.com/rspec/rspec-expectations.git', branch: 'master'
+  gem 'rspec-mocks', git: 'https://github.com/rspec/rspec-mocks.git', branch: 'master'
   gem 'email_spec'
   gem "codeclimate-test-reporter", require: false
 end
